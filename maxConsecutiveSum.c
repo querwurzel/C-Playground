@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <string.h>
 
 unsigned long maxConsecutiveSum(unsigned int* numbers, unsigned int length, unsigned int k) {
   unsigned long maxSum = 0;
@@ -21,9 +22,21 @@ unsigned long maxConsecutiveSum(unsigned int* numbers, unsigned int length, unsi
   return maxSum;
 }
 
-int main() {
+void helloWorld() {
+  const char str[] = "Hello World\n";
 
+  printf("%s\n", str);
+
+  char* pch = strchr(str, 'llo ');
+  
+  printf("Found? %d\n", pch != NULL);
+
+}
+
+int main() {
   srand(time(NULL));
+
+  helloWorld();
 
   const unsigned int numNumbers = 10;
   const unsigned int k = 3;
